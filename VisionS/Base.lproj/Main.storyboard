@@ -54,9 +54,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dd1-cn-y9f">
-                        <barButtonItem key="rightBarButtonItem" image="camera.fill" catalog="system" id="JwD-c3-GEY">
+                        <barButtonItem key="leftBarButtonItem" image="camera.fill" catalog="system" id="McM-u6-yQX">
                             <connections>
-                                <action selector="cameraButton:" destination="BYZ-38-t0r" id="UZl-rH-NVH"/>
+                                <action selector="cameraButton:" destination="BYZ-38-t0r" id="r56-eg-9wN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gallery" width="1" id="JwD-c3-GEY">
+                            <inset key="landscapeImageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                            <color key="tintColor" red="0.2000780774" green="0.91412038110000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="galleryButton:" destination="BYZ-38-t0r" id="UZl-rH-NVH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -91,6 +99,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="gallery" width="25" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

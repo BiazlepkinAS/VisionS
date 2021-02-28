@@ -1,9 +1,9 @@
 import UIKit
 import Vision
-
+import VisionKit
 
 class MainViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textFieldView: UITextView!
     @IBOutlet weak var activeIndicator: UIActivityIndicatorView!
@@ -14,17 +14,22 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         stopAnimation()
         
-        
     }
-   private func startAnimation() {
-    self.activeIndicator.startAnimating()
+    private func startAnimation() {
+        self.activeIndicator.startAnimating()
     }
     private func stopAnimation() {
         self.activeIndicator.stopAnimating()
     }
     
-
     @IBAction func cameraButton(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
+    @IBAction func galleryButton(_ sender: Any) {
         setupGallery()
         
     }
@@ -41,7 +46,6 @@ class MainViewController: UIViewController {
     }
     
     private func setupVisionTextRecognizeImage(image: UIImage?) {
-        
         var textString = ""
         request = VNRecognizeTextRequest(completionHandler: { (request, error) in
             
@@ -53,7 +57,6 @@ class MainViewController: UIViewController {
                     print("No candidate")
                     continue
                 }
-                
                 textString += "\n\(topCandidate.string)"
                 
                 DispatchQueue.main.async {
