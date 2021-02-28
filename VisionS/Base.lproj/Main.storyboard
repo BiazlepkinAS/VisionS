@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5q0-t7-JoS">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="VisionS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YXl-Iw-53W">
-                                <rect key="frame" x="20" y="138" width="374" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="lLm-37-2aY"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-Wb-chd">
-                                <rect key="frame" x="20" y="458" width="374" height="300"/>
+                                <rect key="frame" x="16" y="397" width="358" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="JhH-O9-ECA"/>
@@ -32,8 +26,14 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YXl-Iw-53W">
+                                <rect key="frame" x="16" y="89" width="358" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="lLm-37-2aY"/>
+                                </constraints>
+                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9H9-et-12O">
-                                <rect key="frame" x="192" y="593" width="30" height="30"/>
+                                <rect key="frame" x="180" y="532" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Ayc-n8-7Cv"/>
                                     <constraint firstAttribute="height" constant="30" id="wKn-dC-1vU"/>
@@ -44,14 +44,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aOc-Wb-chd" secondAttribute="trailing" constant="20" id="6Um-fY-fzu"/>
-                            <constraint firstItem="aOc-Wb-chd" firstAttribute="top" secondItem="YXl-Iw-53W" secondAttribute="bottom" constant="20" id="FOM-gQ-MaC"/>
-                            <constraint firstItem="9H9-et-12O" firstAttribute="centerY" secondItem="aOc-Wb-chd" secondAttribute="centerY" id="HKG-GB-qte"/>
-                            <constraint firstItem="YXl-Iw-53W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="JA6-Uj-n0b"/>
-                            <constraint firstItem="aOc-Wb-chd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QAL-cJ-nwb"/>
-                            <constraint firstItem="YXl-Iw-53W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="adi-A8-1A0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YXl-Iw-53W" secondAttribute="trailing" constant="20" id="bze-po-yV2"/>
-                            <constraint firstItem="9H9-et-12O" firstAttribute="centerX" secondItem="aOc-Wb-chd" secondAttribute="centerX" id="tC3-DI-zqT"/>
+                            <constraint firstItem="YXl-Iw-53W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="2Sf-o6-dx5"/>
+                            <constraint firstItem="aOc-Wb-chd" firstAttribute="centerY" secondItem="9H9-et-12O" secondAttribute="centerY" id="Avh-u1-pQJ"/>
+                            <constraint firstItem="aOc-Wb-chd" firstAttribute="top" secondItem="YXl-Iw-53W" secondAttribute="bottom" constant="8" id="EYe-vo-dBD"/>
+                            <constraint firstItem="YXl-Iw-53W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="h4u-vQ-8wf"/>
+                            <constraint firstItem="aOc-Wb-chd" firstAttribute="centerX" secondItem="9H9-et-12O" secondAttribute="centerX" id="hjz-Wj-nyb"/>
+                            <constraint firstItem="YXl-Iw-53W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kYe-ZJ-3P2"/>
+                            <constraint firstItem="YXl-Iw-53W" firstAttribute="trailing" secondItem="aOc-Wb-chd" secondAttribute="trailing" id="ojP-vu-Uhn"/>
+                            <constraint firstItem="YXl-Iw-53W" firstAttribute="leading" secondItem="aOc-Wb-chd" secondAttribute="leading" id="wlo-c9-gvc"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="0cc-gu-08D" appends="YES" id="M3o-6G-zd1"/>
@@ -85,7 +85,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1005.7971014492755" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vQ6-HY-uGf">
@@ -93,7 +93,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5q0-t7-JoS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3bj-W9-tG9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

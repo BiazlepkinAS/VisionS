@@ -13,26 +13,23 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stopAnimation()
+      
         
     }
+    
+    
     private func startAnimation() {
         self.activeIndicator.startAnimating()
     }
     private func stopAnimation() {
         self.activeIndicator.stopAnimating()
     }
-    
     @IBAction func keyboardDismiss(_ sender: Any) {
         textFieldView.resignFirstResponder()
     }
-    
-    
     @IBAction func cameraButton(_ sender: Any) {
         configDocumentView()
-        
     }
-    
-    
     @IBAction func galleryButton(_ sender: Any) {
         setupGallery()
         
@@ -45,6 +42,8 @@ class MainViewController: UIViewController {
         
         
     }
+    
+    
     
     private func setupGallery() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
