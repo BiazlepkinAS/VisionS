@@ -13,26 +13,37 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stopAnimation()
+      
         
     }
+    
+    
     private func startAnimation() {
         self.activeIndicator.startAnimating()
     }
     private func stopAnimation() {
         self.activeIndicator.stopAnimating()
     }
-    
-    @IBAction func cameraButton(_ sender: Any) {
-        
-        
-        
+    @IBAction func keyboardDismiss(_ sender: Any) {
+        textFieldView.resignFirstResponder()
     }
-    
-    
+    @IBAction func cameraButton(_ sender: Any) {
+        configDocumentView()
+    }
     @IBAction func galleryButton(_ sender: Any) {
         setupGallery()
         
     }
+    private func configDocumentView() {
+        let scanDocumentController = VNDocumentCameraViewController()
+        
+        scanDocumentController.delegate = self
+        self.present(scanDocumentController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
     
     private func setupGallery() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -86,7 +97,7 @@ class MainViewController: UIViewController {
 }
 
 
-extension MainViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+extension MainViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate, VNDocumentCameraViewControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
@@ -97,6 +108,18 @@ extension MainViewController: UIImagePickerControllerDelegate,UINavigationContro
         
         self.imageView.image = image
         setupVisionTextRecognizeImage(image: image)
+    }
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        
+        for pegeNumber in 0..<scan.pageCount{
+            
+            let image = scan.imageOfPage(at: pegeNumber)
+            
+            print(image)
+            
+        }
+        controller.dismiss(animated: true, completion: nil)
     }
     
 }
